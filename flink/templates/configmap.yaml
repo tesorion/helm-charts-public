@@ -12,7 +12,7 @@ data:
 {{ include "flink.configuration" . | indent 4 }}
   flink-conf-taskmanager.yaml: |+
 {{ include "flink.configuration" . | indent 4 }}
-  log4j.properties: |+
+  log4j.{{ .Values.log4j_type | default "properties" }}: |+
 {{ .Values.log4j | indent 4 }}
   security.properties:
     # The java-level namelookup cache policy for successful lookups
