@@ -267,6 +267,7 @@ zookeeper:
   persistence:
     enabled: true
 
+log4j_type: properties
 log4j: |+
  log4j.rootLogger=INFO, file
  log4j.logger.akka=WARN
